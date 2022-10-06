@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  neo4j:
+    container_name: neo4j-db
+    env_file:
+      - ./.env
+    image: neo4j
+    ports:
+      - ${NEO4J_PORT_OUT}:${NEO4J_PORT_IN}
+      - ${NEO4J_PORT_IN}:${NEO4J_PORT_OUT}
+    volumes:
+      - ./neo4j/plugins:/plugins
