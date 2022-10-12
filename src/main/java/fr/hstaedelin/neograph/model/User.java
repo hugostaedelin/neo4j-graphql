@@ -25,6 +25,19 @@ public class User {
 
     }
 
+    public User(String name, Integer age, List<Movie> movies) {
+        this.name = name;
+        this.age = age;
+        this.movies = movies;
+    }
+
+    public User(Long id, String name, Integer age, List<Movie> movies) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.movies = movies;
+    }
+
     public Long getId() {
         return id;
     }
